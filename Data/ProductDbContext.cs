@@ -1,6 +1,6 @@
-using TodoApi.Models;
+using ComApi.Models;
 using Microsoft.EntityFrameworkCore;
-namespace TodoApi.Data;
+namespace ComApi.Data;
 
 public class ProductDbContext : DbContext
 {
@@ -36,7 +36,6 @@ public class ProductDbContext : DbContext
         var connectionString = "server=localhost;database=ecom;User=root1;Password=1234;";
         optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
     }
-
 
 }
 

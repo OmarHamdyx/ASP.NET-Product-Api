@@ -1,5 +1,5 @@
-namespace TodoApi.Data;
-using TodoApi.Models;
+namespace ComApi.Data;
+using ComApi.Models;
 using Microsoft.EntityFrameworkCore;
 public class DbInitializer
 {

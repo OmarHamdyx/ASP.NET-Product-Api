@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "3hjUVzjnzw2ta3oCSLqU8tAKfTZHtKzlZ6I9JPBGklk=",
-  "Source": "TodoApi",
-  "BasePath": "_content/TodoApi",
+  "Hash": "iIJYyqLhrTG6GsyDTbSp/iVWoLOT3TwvJvj0lDCXnro=",
+  "Source": "ComApi",
+  "BasePath": "_content/ComApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TodoApi.Data;
+using ComApi.Data;
 
 #nullable disable
 
-namespace TodoApi.Migrations
+namespace ComApi.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
     partial class ProductDbContextModelSnapshot : ModelSnapshot
@@ -18,7 +18,7 @@ namespace TodoApi.Migrations
                 .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("TodoApi.Models.Category", b =>
+            modelBuilder.Entity("ComApi.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
@@ -75,7 +75,7 @@ namespace TodoApi.Migrations
                         });
                 });
 
-            modelBuilder.Entity("TodoApi.Models.Product", b =>
+            modelBuilder.Entity("ComApi.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
@@ -112,7 +112,7 @@ namespace TodoApi.Migrations
                         });
                 });
 
-            modelBuilder.Entity("TodoApi.Models.ProductCategory", b =>
+            modelBuilder.Entity("ComApi.Models.ProductCategory", b =>
                 {
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -194,15 +194,15 @@ namespace TodoApi.Migrations
                         });
                 });
 
-            modelBuilder.Entity("TodoApi.Models.ProductCategory", b =>
+            modelBuilder.Entity("ComApi.Models.ProductCategory", b =>
                 {
-                    b.HasOne("TodoApi.Models.Category", "Category")
+                    b.HasOne("ComApi.Models.Category", "Category")
                         .WithMany("ProductCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TodoApi.Models.Product", "Product")
+                    b.HasOne("ComApi.Models.Product", "Product")
                         .WithMany("ProductCategories")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -213,12 +213,12 @@ namespace TodoApi.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("TodoApi.Models.Category", b =>
+            modelBuilder.Entity("ComApi.Models.Category", b =>
                 {
                     b.Navigation("ProductCategories");
                 });
 
-            modelBuilder.Entity("TodoApi.Models.Product", b =>
+            modelBuilder.Entity("ComApi.Models.Product", b =>
                 {
                     b.Navigation("ProductCategories");
                 });

@@ -1,4 +1,4 @@
-namespace TodoApi.Models;
+namespace ComApi.Models;
 public class ProductDto
 {
     public int ProductId { get; set; }

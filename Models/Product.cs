@@ -1,4 +1,4 @@
-namespace TodoApi.Models;
+namespace ComApi.Models;
 
 public class Product
 {

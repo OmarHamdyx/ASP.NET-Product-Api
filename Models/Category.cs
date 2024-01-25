@@ -1,4 +1,4 @@
-namespace TodoApi.Models;
+namespace ComApi.Models;
 
 public class Category
 {
@@ -6,7 +6,3 @@ public class Category
     public string Name { get; set; }
     public ICollection<ProductCategory> ProductCategories { get; set; }
 }
-
-
-
-

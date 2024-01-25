@@ -1,7 +1,8 @@
 
-using TodoApi.Models;
-using TodoApi.Interfaces;
-namespace TodoApi.Services;
+using ComApi.Models;
+using ComApi.Interfaces;
+
+namespace ComApi.Services;
 
 public class ProductService : IProductService
 {

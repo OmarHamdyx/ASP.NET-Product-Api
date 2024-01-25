@@ -1,4 +1,4 @@
-namespace TodoApi.Models;
+namespace ComApi.Models;
 
 public class ProductCategory
 {
@@ -8,4 +8,3 @@ public class ProductCategory
     public int CategoryId { get; set; }
     public Category Category { get; set; }
 }
-

@@ -1,20 +1,20 @@
-using TodoApi.Data;
-using TodoApi.Interfaces;
-using TodoApi.Models;
+using ComApi.Data;
+using ComApi.Interfaces;
+using ComApi.Models;
 
 
-namespace TodoApi.Repositories;
+namespace ComApi.Repositories;
 
-    public class ProductRepository : IProductRepository
+public class ProductRepository : IProductRepository
+{
+    private readonly ProductDbContext _context;
+
+    public ProductRepository(ProductDbContext context)
     {
-        private readonly ProductDbContext _context;
+        _context = context;
+    }
 
-        public ProductRepository(ProductDbContext context)
-        {
-            _context = context;
-        }
-
-        public List<ProductDto> Search(string searchTerm)
+    public List<ProductDto> Search(string searchTerm)
     {
         var matchingProducts = _context.Products
             .Where(p => p.Name.Contains(searchTerm) || p.ProductCategories.Any(pc => pc.Category.Name.Contains(searchTerm)))
@@ -27,5 +27,5 @@ namespace TodoApi.Repositories;
 
         return matchingProducts;
     }
-    }
+}
 

@@ -1,6 +1,6 @@
 // Models/IProductRepository.cs
-namespace TodoApi.Interfaces;
-using TodoApi.Models;
+namespace ComApi.Interfaces;
+using ComApi.Models;
 
 
 public interface IProductRepository

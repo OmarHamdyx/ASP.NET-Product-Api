@@ -9180,24 +9180,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MHamd\\.nuget\\packages\\": {}
+    "C:\\Users\\ZOLTA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MHamd\\TodoApi\\TodoApi.csproj",
-      "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\MHamd\\TodoApi\\TodoApi.csproj",
-      "packagesPath": "C:\\Users\\MHamd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MHamd\\TodoApi\\obj\\",
+      "projectUniqueName": "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\ComApi.csproj",
+      "projectName": "ComApi",
+      "projectPath": "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\ComApi.csproj",
+      "packagesPath": "C:\\Users\\ZOLTA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MHamd\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ZOLTA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9272,7 +9274,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
