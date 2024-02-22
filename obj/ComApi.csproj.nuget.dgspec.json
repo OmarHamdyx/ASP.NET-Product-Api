@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\ComApi.csproj": {}
+    "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\ComApi.csproj": {
+    "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\ComApi.csproj",
+        "projectUniqueName": "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj",
         "projectName": "ComApi",
-        "projectPath": "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\ComApi.csproj",
+        "projectPath": "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj",
         "packagesPath": "C:\\Users\\ZOLTA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZOLTA\\Documents\\GitHub\\.net-product-api\\obj\\",
+        "outputPath": "O:\\Repositories\\ASP.NET-Product-Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ZOLTA\\AppData\\Roaming\\NuGet\\NuGet.Config",
