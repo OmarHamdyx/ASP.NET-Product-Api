@@ -15,6 +15,7 @@ public class ProductService : IProductService
 
     public List<ProductDto> SearchProducts(string searchTerm)
     {
+                              
         var matchingProducts = _productRepository.Search(searchTerm);
 
         return matchingProducts;

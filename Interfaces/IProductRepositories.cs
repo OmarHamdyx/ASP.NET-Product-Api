@@ -5,5 +5,5 @@ using ComApi.Models;
 
 public interface IProductRepository
 {
- public List<ProductDto> Search(string searchTerm) ;  
+    public  List<ProductDto> Search(string searchTerm);
 }

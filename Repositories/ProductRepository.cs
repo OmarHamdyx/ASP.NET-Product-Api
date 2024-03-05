@@ -1,6 +1,7 @@
 using ComApi.Data;
 using ComApi.Interfaces;
 using ComApi.Models;
+using System.Linq;
 
 
 namespace ComApi.Repositories;
@@ -17,7 +18,11 @@ public class ProductRepository : IProductRepository
     public List<ProductDto> Search(string searchTerm)
     {
         var matchingProducts = _context.Products
-            .Where(p => p.Name.Contains(searchTerm) || p.ProductCategories.Any(pc => pc.Category.Name.Contains(searchTerm)))
+            .Where(p =>
+                p.Name != null &&
+                (p.Name.Contains(searchTerm) ||
+                 (p.ProductCategories != null &&
+                  p.ProductCategories.Any(pc => pc.Category != null && pc.Category.Name != null && pc.Category.Name.Contains(searchTerm)))))
             .Select(p => new ProductDto
             {
                 ProductId = p.ProductId,

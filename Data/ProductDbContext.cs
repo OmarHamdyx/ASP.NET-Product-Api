@@ -26,6 +26,7 @@ public class ProductDbContext : DbContext
             .HasForeignKey(pc => pc.CategoryId);
 
         base.OnModelCreating(modelBuilder);
+
         new DbInitializer(modelBuilder).Seed();
 
 
