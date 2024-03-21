@@ -3,16 +3,16 @@ using ComApi.Models;
 using Microsoft.EntityFrameworkCore;
 public class DbInitializer
 {
-    private readonly ModelBuilder modelBuilder;
+    private readonly ModelBuilder _modelBuilder;
 
     public DbInitializer(ModelBuilder modelBuilder)
     {
-        this.modelBuilder = modelBuilder;
+        this._modelBuilder = modelBuilder;
     }
 
     public void Seed()
     {
-        modelBuilder.Entity<Product>().HasData(
+        _modelBuilder.Entity<Product>().HasData(
         new Product { ProductId = 1, Name = "Hp Laptop 15" },
         new Product { ProductId = 2, Name = "iPhone 15" },
         new Product { ProductId = 3, Name = "Samsung S23" },
@@ -20,7 +20,7 @@ public class DbInitializer
     );
 
         // Seed categories
-        modelBuilder.Entity<Category>().HasData(
+        _modelBuilder.Entity<Category>().HasData(
             new Category { CategoryId = 1, Name = "Laptops" },
             new Category { CategoryId = 2, Name = "Computers" },
             new Category { CategoryId = 3, Name = "Electronics" },
@@ -32,7 +32,7 @@ public class DbInitializer
         );
 
         // Seed the ProductCategory relationships
-        modelBuilder.Entity<ProductCategory>().HasData(
+        _modelBuilder.Entity<ProductCategory>().HasData(
             new ProductCategory { ProductId = 1, CategoryId = 1 },
             new ProductCategory { ProductId = 1, CategoryId = 2 },
             new ProductCategory { ProductId = 1, CategoryId = 3 },
