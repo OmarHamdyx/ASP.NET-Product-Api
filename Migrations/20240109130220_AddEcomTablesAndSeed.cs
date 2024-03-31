@@ -66,7 +66,7 @@ namespace ComApi.Migrations
                         name: "FK_ProductCategories_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "ProductId",
+                        principalColumn: "ItemId",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -88,7 +88,7 @@ namespace ComApi.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "Name" },
+                columns: new[] { "ItemId", "Name" },
                 values: new object[,]
                 {
                     { 1, "Hp Laptop 15" },
@@ -99,7 +99,7 @@ namespace ComApi.Migrations
 
             migrationBuilder.InsertData(
                 table: "ProductCategories",
-                columns: new[] { "CategoryId", "ProductId" },
+                columns: new[] { "CategoryId", "ItemId" },
                 values: new object[,]
                 {
                     { 1, 1 },

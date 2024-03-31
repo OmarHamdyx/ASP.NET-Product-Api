@@ -1,30 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
 using ComApi.Services;
 
-//api/Product
-// ProductController.cs
-[ApiController]
-[Route("api/[controller]")]
-public class ProductController : ControllerBase
+namespace ComApi.Controllers    
 {
-    private readonly IProductService _productService;
+    //api/Product
+    // ProductController.cs
+    [ApiController]
+    [Route("api/[controller]")]
 
-    public ProductController(IProductService productService)
+    public class ProductController : ControllerBase
     {
-        _productService = productService;
-    }
+        private readonly IProductService _productService;
 
-    [HttpGet("{productName}")]
-    public IActionResult GetProductByName(string productName)
-    {
-        var matchingProducts = _productService.SearchProducts(productName);
-
-        if (matchingProducts.Count == 0)
+        public ProductController(IProductService productService)
         {
-            return NotFound();
+            _productService = productService;
         }
 
-        return Ok(matchingProducts);
+        [HttpGet("{productName}")]
+        public IActionResult GetProductByName(string productName)
+        {
+            var matchingProducts = _productService.SearchProducts(productName);
+
+            if (matchingProducts.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(matchingProducts);
+        }
     }
 }
 

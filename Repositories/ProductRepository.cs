@@ -14,21 +14,41 @@ public class ProductRepository : IProductRepository
         _context = context;
     }
 
-    public List<ProductDto> Search(string searchTerm)
+    public List<ResponseDto> Search(string searchTerm)
     {
-       
-        //List<Product> products = new List<Product>();
-        
-        
-        var matchingProducts =  _context.Products
+
+
+        if (searchTerm.Equals("all-products", StringComparison.OrdinalIgnoreCase))
+        {
+            List<ResponseDto> allProducts = _context.Products.Select(p => new ResponseDto()
+            {
+                ItemId = p.ProductId,
+                ItemName = p.Name
+            }).ToList();
+
+            return allProducts; 
+
+        }
+        if (searchTerm.Equals("all-categories", StringComparison.OrdinalIgnoreCase))
+        {
+            List<ResponseDto> allProducts = _context.Categories.Select(c => new ResponseDto()
+            {
+                ItemId = c.CategoryId,
+                ItemName = c.Name
+            }).ToList();
+
+            return allProducts; 
+
+        }
+        var matchingProducts = _context.Products
             .Where(p =>
                 p.Name != null &&
                 (p.Name.Contains(searchTerm) || (p.ProductCategories != null &&
                   p.ProductCategories.Any(pc => pc.Category != null && pc.Category.Name != null && pc.Category.Name.Contains(searchTerm)))))
-            .Select(p => new ProductDto
+            .Select(p => new ResponseDto
             {
-                ProductId = p.ProductId,
-                ProductName = p.Name
+                ItemId = p.ProductId,
+                ItemName = p.Name
             })
             .ToList();
 
