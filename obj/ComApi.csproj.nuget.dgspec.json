@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj": {}
+    "O:\\Repositories\\ComApi\\ComApi.csproj": {}
   },
   "projects": {
-    "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj": {
+    "O:\\Repositories\\ComApi\\ComApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj",
+        "projectUniqueName": "O:\\Repositories\\ComApi\\ComApi.csproj",
         "projectName": "ComApi",
-        "projectPath": "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj",
+        "projectPath": "O:\\Repositories\\ComApi\\ComApi.csproj",
         "packagesPath": "C:\\Users\\ZOLTA\\.nuget\\packages\\",
-        "outputPath": "O:\\Repositories\\ASP.NET-Product-Api\\obj\\",
+        "outputPath": "O:\\Repositories\\ComApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ZOLTA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -64,9 +69,17 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "NuGet.Frameworks": {
+              "target": "Package",
+              "version": "[6.9.1, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
@@ -96,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

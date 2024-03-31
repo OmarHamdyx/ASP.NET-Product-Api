@@ -80,7 +80,7 @@ namespace ComApi.Migrations
 
             modelBuilder.Entity("ComApi.Models.Product", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("ItemId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -88,7 +88,7 @@ namespace ComApi.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("ItemId");
 
                     b.ToTable("Products");
 
@@ -117,13 +117,13 @@ namespace ComApi.Migrations
 
             modelBuilder.Entity("ComApi.Models.ProductCategory", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("ItemId")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.HasKey("ProductId", "CategoryId");
+                    b.HasKey("ItemId", "CategoryId");
 
                     b.HasIndex("CategoryId");
 
@@ -207,7 +207,7 @@ namespace ComApi.Migrations
 
                     b.HasOne("ComApi.Models.Product", "Product")
                         .WithMany("ProductCategories")
-                        .HasForeignKey("ProductId")
+                        .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

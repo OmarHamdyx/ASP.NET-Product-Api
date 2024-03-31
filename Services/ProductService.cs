@@ -13,7 +13,7 @@ public class ProductService : IProductService
         _productRepository = productRepository;
     }
 
-    public List<ProductDto> SearchProducts(string searchTerm)
+    public List<ResponseDto> SearchProducts(string searchTerm)
     {
                               
         var matchingProducts = _productRepository.Search(searchTerm);

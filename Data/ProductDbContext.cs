@@ -34,7 +34,7 @@ public class ProductDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        var connectionString = "server=localhost;database=ecom;User=root1;Password=1234;";
+        string connectionString = "server=localhost;database=ecom;User=root1;Password=1234;";
         optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
     }
 
