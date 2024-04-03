@@ -47,7 +47,7 @@ namespace ComApi.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "ProductCategories",
+                name: "ProductCategory",
                 columns: table => new
                 {
                     ProductId = table.Column<int>(type: "int", nullable: false),
@@ -98,7 +98,7 @@ namespace ComApi.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "ProductCategories",
+                table: "ProductCategory",
                 columns: new[] { "CategoryId", "ItemId" },
                 values: new object[,]
                 {
@@ -119,7 +119,7 @@ namespace ComApi.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductCategories_CategoryId",
-                table: "ProductCategories",
+                table: "ProductCategory",
                 column: "CategoryId");
         }
 
@@ -127,7 +127,7 @@ namespace ComApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ProductCategories");
+                name: "ProductCategory");
 
             migrationBuilder.DropTable(
                 name: "Categories");

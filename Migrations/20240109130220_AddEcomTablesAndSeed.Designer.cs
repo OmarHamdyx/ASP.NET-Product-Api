@@ -127,7 +127,7 @@ namespace ComApi.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("ProductCategories");
+                    b.ToTable("ProductCategory");
 
                     b.HasData(
                         new
@@ -200,13 +200,13 @@ namespace ComApi.Migrations
             modelBuilder.Entity("ComApi.Models.ProductCategory", b =>
                 {
                     b.HasOne("ComApi.Models.Category", "Category")
-                        .WithMany("ProductCategories")
+                        .WithMany("ProductCategory")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ComApi.Models.Product", "Product")
-                        .WithMany("ProductCategories")
+                        .WithMany("ProductCategory")
                         .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -218,12 +218,12 @@ namespace ComApi.Migrations
 
             modelBuilder.Entity("ComApi.Models.Category", b =>
                 {
-                    b.Navigation("ProductCategories");
+                    b.Navigation("ProductCategory");
                 });
 
             modelBuilder.Entity("ComApi.Models.Product", b =>
                 {
-                    b.Navigation("ProductCategories");
+                    b.Navigation("ProductCategory");
                 });
 #pragma warning restore 612, 618
         }
