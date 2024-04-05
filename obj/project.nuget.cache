@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ktwY1Cy48al12a1DgFSbDWQ6tgw67bqpsWrYtVXeHKEXXLHRv3TRn5JnxZM++alO5+sCE8aVUeA1qUU6A2QOlg==",
+  "dgSpecHash": "4wkUI2IdSJI/gc+jqXyM3T31orRAEr3V/FoeOr3A0xqFhB3vvBfn6d/SNnYR7pLKr1GlRHmCYj/NCHt43EXNYQ==",
   "success": true,
-  "projectFilePath": "O:\\Repositories\\ASP.NET-Product-Api\\ComApi.csproj",
+  "projectFilePath": "O:\\Repositories\\ComApi\\ComApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZOLTA\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ZOLTA\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
