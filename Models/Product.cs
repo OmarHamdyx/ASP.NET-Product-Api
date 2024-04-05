@@ -1,5 +1,3 @@
-using System.Collections.ObjectModel;
-
 namespace ComApi.Models;
 
 public class Product

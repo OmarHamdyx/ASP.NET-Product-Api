@@ -17,7 +17,7 @@ public class ProductDbContext : DbContext
 
 		modelBuilder.Entity<ProductCategory>()
 			.HasOne(pc => pc.Product)
-			.WithMany(p => p.ProductCategories)
+			.WithMany(p => p.ProductCategory)
 			.HasForeignKey(pc => pc.ProductId);
 
 
