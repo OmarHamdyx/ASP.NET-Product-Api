@@ -47,7 +47,7 @@ namespace ComApi.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "ProductCategories",
+                name: "ProductCategory",
                 columns: table => new
                 {
                     ProductId = table.Column<int>(type: "int", nullable: false),
@@ -66,7 +66,7 @@ namespace ComApi.Migrations
                         name: "FK_ProductCategories_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "ProductId",
+                        principalColumn: "ItemId",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -88,7 +88,7 @@ namespace ComApi.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "Name" },
+                columns: new[] { "ItemId", "Name" },
                 values: new object[,]
                 {
                     { 1, "Hp Laptop 15" },
@@ -98,8 +98,8 @@ namespace ComApi.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "ProductCategories",
-                columns: new[] { "CategoryId", "ProductId" },
+                table: "ProductCategory",
+                columns: new[] { "CategoryId", "ItemId" },
                 values: new object[,]
                 {
                     { 1, 1 },
@@ -119,7 +119,7 @@ namespace ComApi.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductCategories_CategoryId",
-                table: "ProductCategories",
+                table: "ProductCategory",
                 column: "CategoryId");
         }
 
@@ -127,7 +127,7 @@ namespace ComApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ProductCategories");
+                name: "ProductCategory");
 
             migrationBuilder.DropTable(
                 name: "Categories");

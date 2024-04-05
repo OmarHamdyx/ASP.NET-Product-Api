@@ -7,32 +7,55 @@ namespace ComApi.Repositories;
 
 public class ProductRepository : IProductRepository
 {
-    private readonly ProductDbContext _context;
+	private readonly ProductDbContext _context;
 
-    public ProductRepository(ProductDbContext context)
-    {
-        _context = context;
-    }
+	public ProductRepository(ProductDbContext context)
+	{
+		_context = context;
+	}
 
-    public List<ProductDto> Search(string searchTerm)
-    {
-       
-        //List<Product> products = new List<Product>();
-        
-        
-        var matchingProducts =  _context.Products
-            .Where(p =>
-                p.Name != null &&
-                (p.Name.Contains(searchTerm) || (p.ProductCategories != null &&
-                  p.ProductCategories.Any(pc => pc.Category != null && pc.Category.Name != null && pc.Category.Name.Contains(searchTerm)))))
-            .Select(p => new ProductDto
-            {
-                ProductId = p.ProductId,
-                ProductName = p.Name
-            })
-            .ToList();
+	public List<ResponseDto> Search(string searchTerm)
+	{
 
-        return matchingProducts;
-    }
+
+		if (searchTerm.Equals("all-products", StringComparison.OrdinalIgnoreCase))
+		{
+			List<ResponseDto> allProducts = _context.Products.Select(p => new ResponseDto()
+			{
+				ItemId = p.ProductId,
+				ItemName = p.Name
+			}).ToList();
+
+			return allProducts;
+
+		}
+		if (searchTerm.Equals("all-categories", StringComparison.OrdinalIgnoreCase))
+		{
+			List<ResponseDto> responseDto = _context.Categories.Select(c => new ResponseDto()
+			{
+				ItemId = c.CategoryId,
+				ItemName = c.Name
+			}).ToList();
+
+			return responseDto;
+
+		}
+		else
+		{
+			List<ResponseDto> responseDto = _context.Products
+				.Where(p =>
+					p.Name != null &&
+					(p.Name.Contains(searchTerm) || (p.ProductCategory != null &&
+					  p.ProductCategory.Any(pc => pc.Category != null && pc.Category.Name != null && pc.Category.Name.Contains(searchTerm)))))
+				.Select(p => new ResponseDto
+				{
+					ItemId = p.ProductId,
+					ItemName = p.Name
+				})
+				.ToList();
+
+			return responseDto;
+		}
+	}
 }
 
